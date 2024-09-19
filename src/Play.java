@@ -29,16 +29,16 @@ public class Play
                 if (line.length() == 1) {
                     switch (input) {
                         case 'A':
-                            Helper.guess("sports.txt", randomNum(), "sport");
+                            Helper.playRound("sports.txt", randomNum(), "sport");
                             break;
                         case 'B':
-                            Helper.guess("movies.txt", randomNum(), "movie");
+                            Helper.playRound("movies.txt", randomNum(), "movie");
                             break;
                         case 'C':
-                            Helper.guess("games.txt", randomNum(), "video game");
+                            Helper.playRound("games.txt", randomNum(), "video game");
                             break;
                         case 'D':
-                            Helper.guess("phrases.txt", randomNum(), "phrase");
+                            Helper.playRound("phrases.txt", randomNum(), "phrase");
                             break;
                         case 'Q':
                             // quit game
