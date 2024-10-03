@@ -1,8 +1,8 @@
 /**********
- * Jawuan Lewis
+ * Author: Jawuan Lewis
  * Personal Project: Hangman (Console App)
- * Description: Main file to run for playing Hangman in the console. User can choose between
- *              4 different categories for words: sports, movies, video games, and fun phrases.
+ * Description: Main file to run for playing Hangman in the console. Player can choose between
+ *              4 different themes for words: sports, movies, video games, and fun phrases.
  **********/
 
 import java.util.Random;
@@ -63,7 +63,7 @@ public class Play
     /**
      * Display the opening menu for a round of Hangman.
      */
-    public static void displayMenu()
+    private static void displayMenu()
     {
         System.out.print("""
             A)\tSports
@@ -79,7 +79,7 @@ public class Play
      * Generate random number to use in selecting a random word.
      * @return - random positive number under 20
      */
-    public static int randomNum()
+    private static int randomNum()
     {
         Random rand = new Random();
         return rand.nextInt(20);
