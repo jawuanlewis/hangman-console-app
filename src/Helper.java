@@ -123,7 +123,7 @@ public class Helper
         // determine if player wins or loses this round
         int numGuesses = checkGuesses(word, tempWord, 6);
         if (numGuesses == 0) {
-            System.out.printf("\nSorry! You have run out of guesses.\nThe %s is: %s\n\n", type, fullWord);
+            System.out.printf("\n%s\nSorry! You have run out of guesses.\nThe %s is:  %s\n\n", Hangman.getHangman(numGuesses), type, fullWord);
         } else {
             System.out.printf("\nCongratulations! You have correctly guessed the %s.\n%s\n\n", type, fullWord);
         }

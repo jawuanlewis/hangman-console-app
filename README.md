@@ -1,6 +1,6 @@
 # hangman-console-app
 
-Source code for a simple version of the game _Hangman_, which can be played in the console. There are four available themes of words to guess, and the user can play as many rounds as they want.
+Source code for a simple version of the game _Hangman_, which can be played in the console. There are four available themes of words to guess (sports, movies, video games, and fun phrases/idioms), and the user can play as many rounds as they want before quitting.
 
 ## Prerequisites
 

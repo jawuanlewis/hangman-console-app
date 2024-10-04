@@ -14,7 +14,7 @@ public class Hangman
     {
         String hangman;
         switch (lives) {
-            case 6:
+            case 0:
                 hangman = """
                     ________
                     |   |
@@ -24,7 +24,7 @@ public class Hangman
                     ________
                     """;
                 break;
-            case 5:
+            case 1:
                 hangman = """
                     ________
                     |   |
@@ -34,7 +34,7 @@ public class Hangman
                     ________
                     """;
                 break;
-            case 4:
+            case 2:
                 hangman = """
                     ________
                     |   |
@@ -54,7 +54,7 @@ public class Hangman
                     ________
                     """;
                 break;
-            case 2:
+            case 4:
                 hangman = """
                     ________
                     |   |
@@ -64,7 +64,7 @@ public class Hangman
                     ________
                     """;
                 break;
-            case 1:
+            case 5:
                 hangman = """
                     ________
                     |   |
