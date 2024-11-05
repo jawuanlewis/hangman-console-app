@@ -1,3 +1,6 @@
+### Mac OS ###
+.DS_Store
+
 ### IntelliJ IDEA ###
 out/
 .idea/
@@ -26,6 +29,3 @@ bin/
 
 ### VS Code ###
 .vscode/
-
-### Mac OS ###
-.DS_Store

@@ -1,22 +1,21 @@
-/**********
- * File: Helper.java
- * Description: Helper functions for playing each round of the game.
- **********/
-
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+/**********
+ * Helper functions for playing each round of the game.
+ **********/
+
 public class Helper
 {
     /**
      * Randomly choose a word for the player to guess in a round of Hangman.
-     * @param filename - (String) input file containing words to choose from
-     * @param random - (Integer) determines which word to randomly select
-     * @return - (String) random word from the input file
-     * @throws IOException - file-reading issues
+     * @param filename (String) input file containing words to choose from
+     * @param random (Integer) determines which word to randomly select
+     * @return (String) random word from the input file
+     * @throws IOException file-reading issues
      */
     private static String getRandomWord(String filename, int random) throws IOException
     {
@@ -32,9 +31,9 @@ public class Helper
 
     /**
      * Create displays for a word's letter slots that the player must attempt to guess correctly.
-     * @param word - (String) the word to create a display for in a round of Hangman
-     * @param showAnswer - (Boolean) determines whether to create empty word or the final result
-     * @return - (String) either a string of empty slots, or a string displaying the word
+     * @param word (String) the word to create a display for in a round of Hangman
+     * @param showAnswer (Boolean) determines whether to create empty word or the final result
+     * @return (String) either a string of empty slots, or a string displaying the word
      */
     private static String createWordDisplay(String word, boolean showAnswer)
     {
@@ -58,10 +57,10 @@ public class Helper
 
     /**
      * Prompt the player to guess letters in a given mystery word, and validate their guesses.
-     * @param word - (String) word the player is attempting to guess
-     * @param tempWord - (String) empty letter slots that the player must guess and fill in
-     * @param numGuesses - (Integer) number of guesses the player has left
-     * @return - (Integer) the final amount of guesses when the round is over (0 if the player ran out)
+     * @param word (String) word the player is attempting to guess
+     * @param tempWord (String) empty letter slots that the player must guess and fill in
+     * @param numGuesses (Integer) number of guesses the player has left
+     * @return (Integer) the final amount of guesses when the round is over (0 if the player ran out)
      */
     private static int checkGuesses(String word, String tempWord, int numGuesses) 
     {
@@ -109,10 +108,10 @@ public class Helper
 
     /**
      * Set up and run a new round of Hangman.
-     * @param filename - (String) input file containing words to choose from
-     * @param random - (Integer) determines which word to randomly select
-     * @param type - (String) the type/category of word
-     * @throws IOException - probably file-reading issues
+     * @param filename (String) input file containing words to choose from
+     * @param random (Integer) determines which word to randomly select
+     * @param type (String) the type/category of word
+     * @throws IOException probably file-reading issues
      */
     public static void playRound(String filename, int random, String type) throws IOException
     {

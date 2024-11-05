@@ -1,14 +1,13 @@
 /**********
- * File: Hangman.java
- * Description: Functionality to create the Hangman display.
+ * Functionality to create the Hangman figure display.
  **********/
 
 public class Hangman 
 {
     /**
-     * Create the corresponding hangman (stick figure), based on the players's remaining lives.
-     * @param lives - (Integer) the player's remaining attempts in a round
-     * @return - (String) the current stick figure to be displayed
+     * Return the corresponding hangman (stick figure), based on the players's remaining lives.
+     * @param lives (Integer) the player's remaining attempts in a round
+     * @return (String) the current stick figure to be displayed
      */
     public static String getHangman(int lives) 
     {
