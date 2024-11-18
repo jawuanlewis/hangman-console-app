@@ -1,3 +1,5 @@
+package com.github.jawuanlewis.hangmanconsoleapp;
+
 /**********
  * Functionality to create the Hangman figure display.
  **********/

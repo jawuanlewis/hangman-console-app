@@ -1,3 +1,5 @@
+package com.github.jawuanlewis.hangmanconsoleapp;
+
 import java.util.Random;
 import java.util.Scanner;
 import java.io.IOException;
@@ -58,9 +60,6 @@ public class Play
         }
     }
 
-    /**
-     * Display the opening menu for a round of Hangman.
-     */
     private static void displayMenu()
     {
         System.out.print("""
@@ -73,10 +72,6 @@ public class Play
         """);
     }
 
-    /**
-     * Generate random number to use in selecting a random word.
-     * @return random positive number under 20
-     */
     private static int randomNum()
     {
         Random rand = new Random();

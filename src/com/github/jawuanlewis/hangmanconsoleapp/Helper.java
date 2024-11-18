@@ -1,3 +1,5 @@
+package com.github.jawuanlewis.hangmanconsoleapp;
+
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,16 +12,8 @@ import java.util.ArrayList;
 
 public class Helper
 {
-    /**
-     * Randomly choose a word for the player to guess in a round of Hangman.
-     * @param filename (String) input file containing words to choose from
-     * @param random (Integer) determines which word to randomly select
-     * @return (String) random word from the input file
-     * @throws IOException file-reading issues
-     */
     private static String getRandomWord(String filename, int random) throws IOException
     {
-        // file-reading tools
         FileReader fr = new FileReader(filename);
         BufferedReader br = new BufferedReader(fr);
 
@@ -41,10 +35,8 @@ public class Helper
         for (int i = 0; i < word.length(); i++) {
             char curr = word.charAt(i);
             if (showAnswer) {
-                // create a string that reveals the word
                 result.append(curr).append(" ");
             } else {
-                // create empty letter slots for the player to guess
                 if (curr == ' ') {
                     result.append("  ");
                 } else {
@@ -55,21 +47,13 @@ public class Helper
         return result.toString();
     }
 
-    /**
-     * Prompt the player to guess letters in a given mystery word, and validate their guesses.
-     * @param word (String) word the player is attempting to guess
-     * @param tempWord (String) empty letter slots that the player must guess and fill in
-     * @param numGuesses (Integer) number of guesses the player has left
-     * @return (Integer) the final amount of guesses when the round is over (0 if the player ran out)
-     */
     private static int checkGuesses(String word, String tempWord, int numGuesses) 
     {
         StringBuilder newWord = new StringBuilder(tempWord);    // update the word as player plays
         ArrayList<Character> guessedLetters = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
 
-        // allow player to guess letters until all letters have been found,
-        // or until all guesses have been used up
+        // go until all letters are found, or until all guesses run out
         while (tempWord.contains("_") && numGuesses > 0) {
             System.out.print("\n" + Hangman.getHangman(numGuesses));
             System.out.printf("\n%s\n\nYou have %d attempt(s) remaining.\nMake a guess: ", tempWord, numGuesses);
@@ -90,13 +74,12 @@ public class Helper
             char guess = Character.toUpperCase(in.charAt(0));
             guessedLetters.add(guess);
 
-            // if player guesses a correct letter, it will appear in the string
+            // correctly guessed letters get revealed in the string
             for (int i = 0; i < word.length(); i++) {
                 if (guess == word.charAt(i)) {
                     newWord.setCharAt(i*2, guess);
                 }
             }
-            // lose guesses if no new letters found
             if (tempWord.contentEquals(newWord)) {
                 numGuesses--;
             } else {
